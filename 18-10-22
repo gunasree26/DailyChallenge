@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+ 
+int main()
+{
+  int n;
+  scanf("%d ",&n);
+  int ctr=1;
+  while(ctr<=n)
+  {
+    if(ctr<n/2)
+    {
+    printf("%d ",2*ctr);
+    }
+    else
+    {
+    printf("%d ",3*ctr);
+    }
+    ctr++;
+  }
+}
