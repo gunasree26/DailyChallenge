@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char s[1001];
+    int p;
+    scanf("%s\n%d",s,&p);
+    for(int i=0;i<strlen(s);i++){
+        if(i<p||i>strlen(s)-p-1)
+        printf("%c",s[i]);
+    }
+
+}
