@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+char s[1001];
+scanf("%s",s);
+int i=strlen(s)-1,f=0;
+if(s[i]=='0'){s[i]='1';
+printf("%s",s);
+return;
+}
+while(i>=0)
+{
+    if(s[i]=='1')
+    {  int t=i-1;
+       while(t>=0)
+       {   char c=s[t];
+           s[t]='1';
+           s[t+1]='0';
+           if(c=='0'){
+           f=1;
+           break;
+           }
+           t--;
+       }
+       break;
+    }
+    i--;
+}
+printf("%s",s);
+if(f==0) printf("0");
+}
