@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+char s[1001][1001];
+int i=0;
+while(scanf("%s",s[i])>0)
+i++;
+for(int j=0;j<i;j++)
+{
+ if(j!=0&&j!=i-1)
+ for(int k=strlen(s[j])-1;k>=0;k--) printf("%c",s[j][k]);
+ else
+ printf("%s",s[j]);
+ printf(" ");
+}
+}
