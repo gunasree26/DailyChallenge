@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
+int main()
+{
+char s[101],s1[101],t[101];
+scanf("%s %s",s,s1);
+strcpy(t,s);
+strcat(s,s1);
+strcat(s1,t);
+int n,m;
+m=atoi(s);
+n=atoi(s1);
+if((int)sqrt(m)(int)sqrt(m)==m||(int)sqrt(n)(int)sqrt(n)==n) printf("Yes");
+else printf("No");
+
+}
