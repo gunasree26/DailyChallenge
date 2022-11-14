@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+char s[1001],s1[1001];
+int l=0,n;
+scanf("%s %d",s,&n);
+for(int i=0;i<strlen(s);i++)
+{
+    if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
+    s1[l++]=s[i];
+    if(l>=n) break;
+}
+s1[l]='\0';
+l>=n?printf("%s",s1):printf("-1");
+}
