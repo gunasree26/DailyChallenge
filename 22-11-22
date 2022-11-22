@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+int fq(int n)
+{
+    char s[101]={0};
+    int su=0;
+    while(n!=0)
+    {
+        s[n%10+'0']++;;
+        if(s[n%10+'0']==1)
+            su+=n%10;
+        n/=10;
+    }
+    return su;
+}
+int main()
+{
+char s[101]={0},s1[101]={0};
+int n,n1,su=0,su1=0;
+scanf("%d %d",&n,&n1);
+su=fq(n);
+su1=fq(n1);
+printf(su==su1?"YES":"NO");
+}
