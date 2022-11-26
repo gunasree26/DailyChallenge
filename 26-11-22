@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+int gcd(int n,int m)
+{
+    while(m!=n)
+    {
+        if(n>m) n-=m;
+        else m-=n;
+    }
+    return n;
+}
+int main()
+{
+int n;
+scanf("%d",&n);
+for(int i=1;i<=n;i++)
+{
+    int t=gcd(i,4);
+    if(i%t==0&&4%t==0)
+    {
+        if(t==1) printf("%d/%d ",i,4);
+        else if(4/t==1) printf("%d ",i/4);
+        else printf("%d/%d ",i/t,4/t);
+    }
+}
+}
