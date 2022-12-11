@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+ char s[101];
+ int n;
+ scanf("%s\n%d",&s,&n);
+ for(int i=0;i<strlen(s)-n;i++) 
+ printf("%c",s[i]);
+ for(int i=strlen(s);i>=(strlen(s)-n+1);i--)
+ printf("%c",s[i-1]);
+ return 0;
+}
