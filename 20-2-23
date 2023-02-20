@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+char s[101];
+scanf("%s",s);
+printf("%c%c",s[0],s[strlen(s)-1]);
+}
